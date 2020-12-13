@@ -1,16 +1,9 @@
-package xD;
+
 
 public class ConditionalOperator {
 
 	public static void main(String[] args) {
 		
-		System.out.println(EveNumb(5,6));
-		System.out.println(Cogito(-3, 4));
-		System.out.println(Cogito(3, 0));
-		System.out.println(Cogito(0, 0));
-		System.out.println(SumPositive(3, -12, 0));
-		System.out.println(Maximus(5, -3, 4));
-		System.out.println("TI LOX");
 
 	}
 	
@@ -96,4 +89,22 @@ public class ConditionalOperator {
 		
 	}
 	
+	public static char Mark(int a) {
+		//char result;
+		if (a < 1 || a > 100) {
+			return 7;
+		} else if (a > 0 && a < 20) {
+			return 70;
+		} else if (a < 40) {
+			return 69;
+		} else if (a < 60) {
+			return 68;
+		} else if (a < 75) {
+			return 67;
+		} else if (a < 90) {
+			return 66;
+		} else {
+			return 65;
+		}
+	}
 }
