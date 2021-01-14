@@ -1,3 +1,5 @@
+package view;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -49,34 +51,5 @@ public class Calc extends JFrame {
         container.add(button);
 
     }
-    //    JTextField f1 = new JTextField("-5");
-//    String text = f1.getText();
-//    int xaxis1 = Integer.parseInt(text);
-    class ButtonEventListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            String message = "";
-            message += "You've reached the button\n";
-            message += "The true answer is" + calculate() +"\n";
-            message += "I hope you've enjoyed it =)";
-            JOptionPane.showMessageDialog(null, message,"Result",JOptionPane.PLAIN_MESSAGE);
-        }
-        public int calculate() {
-            String text1 = input1.getText();
-            int x = Integer.parseInt(text1);
-            String text2 = input2.getText();
-            int y = Integer.parseInt(text2);
 
-            if (radio1.isSelected()) {
-                return x + y;
-            } else if (radio2.isSelected()) {
-                return x - y;
-            } else if (radio3.isSelected()) {
-                return x * y;
-            } else if (radio4.isSelected()) {
-                return x / y;
-            } else if (radio5.isSelected()) {
-                return x % y;
-            }else return 0;
-        }
-    }
 }
