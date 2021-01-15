@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
@@ -105,6 +106,38 @@ public class Methods {
                 }
             }
 
+        }
+        return sb.toString();
+    }
+
+    public String bitReversePositions(long number, byte[] bitPositions){
+        String str = Long.toBinaryString(number);
+        StringBuilder sb = new StringBuilder(str);
+        if(str.length() <= 7) {
+            int length = 7 - str.length();
+            for(int i = 0; i < length; i++)
+                sb.insert(0, 0);
+        }
+        for(int i = 0; i < bitPositions.length; i++){
+
+            for(int j = 0; j < sb.length() - 1; j++){
+                if(sb.charAt(bitPositions[i]) != 49){
+                    if(bitPositions[i] == sb.length() - 1){
+                        sb.append("1").deleteCharAt(bitPositions[i]);
+                        break;
+                    }else{
+                    sb.insert(bitPositions[i], 1).deleteCharAt(bitPositions[i]+1);
+                    break;
+                    }
+                }else if(sb.charAt(bitPositions[i]) != 48){
+                    if(bitPositions[i] == sb.length() - 1){
+                        sb.append("0").deleteCharAt(bitPositions[i]);
+                        break;
+                    }else{
+                    sb.insert(bitPositions[i], 0).deleteCharAt(bitPositions[i]+1);
+                    break;
+                    } }
+            }
         }
         return sb.toString();
     }

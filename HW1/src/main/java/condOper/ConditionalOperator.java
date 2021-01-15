@@ -2,12 +2,8 @@ package condOper;
 
 public class ConditionalOperator {
 
-	public static void main(String[] args) {
-		
-
-	}
 	
-	public static int EveNumb(int a, int b) {
+	public int EveNumb(int a, int b) {
 		int sum = a + b;
 		int mult = a * b;
 		if (a % 2 == 0) {
@@ -19,7 +15,7 @@ public class ConditionalOperator {
 			}
 	}
 	
-	public static String Cogito(int x, int y) {
+	public String Cogito(int x, int y) {
 		String result = "";
 		for ( ; x > 0; ) {
 			if(y > 0) {
@@ -59,7 +55,7 @@ public class ConditionalOperator {
 		return result;
 	}
 	
-	public static int SumPositive(int a, int b, int c )	{
+	public int SumPositive(int a, int b, int c )	{
 		
 		 int arr[] = {a, b, c};
 		
@@ -75,7 +71,7 @@ public class ConditionalOperator {
 		return sum;
 	}
 	
-	public static int Maximus(int a, int b, int c) {
+	public int Maximus(int a, int b, int c) {
 		int result;
 		int sum = a + b + c;
 		int mult = a * b * c;
@@ -89,7 +85,7 @@ public class ConditionalOperator {
 		
 	}
 	
-	public static char Mark(int a) {
+	public char Mark(int a) {
 		//char result;
 		if (a < 1 || a > 100) {
 			return 7;

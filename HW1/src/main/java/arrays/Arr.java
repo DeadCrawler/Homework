@@ -4,75 +4,67 @@ import java.util.Arrays;
 
 
 public class Arr {
-	
-	public static void main(String[] args) {
-		int arr[] = {9,8,7,6,5,4,3,2,1};
-		System.out.println(arrSelectionSort(arr));
 
-	}
-
-	public static int minimalArrayChar(int[] arr){
+	public int minimalArrayChar(int[] arr) {
 		int i = 0;
 		int min = arr[i];
-		for (; i < arr.length; i++){
-			if (min > arr[i]){
+		for (; i < arr.length; i++) {
+			if (min > arr[i]) {
 				min = arr[i];
-			}else continue;
+			} else continue;
 		}
 		return min;
 	}
 
-	public static int maximalArrayChar(int[] arr){
+	public int maximalArrayChar(int[] arr) {
 		int i = 0;
 		int max = arr[i];
-		for (; i < arr.length; i++){
-			if (max < arr[i]){
+		for (; i < arr.length; i++) {
+			if (max < arr[i]) {
 				max = arr[i];
-			}else continue;
+			} else continue;
 		}
 		return max;
 	}
 
-	public static int idMinimalArrayChar(int[] arr){
-		int count = 0;
+	public int idMinimalArrayChar(int[] arr) {
+		int minChar = 0;
 		int i = 0;
 		int min = arr[i];
-		for (; i < arr.length; i++){
-			if (min > arr[i]){
+		for (; i < arr.length; i++) {
+			if (min > arr[i]) {
 				min = arr[i];
-				count++;
-			}else continue;
+				minChar = i;
+			} else continue;
 		}
-		return count;
+		return minChar;
 	}
 
-	public static int idMaximalArrayChar(int[] arr){
-		int count = 0;
+	public int idMaximalArrayChar(int[] arr) {
+		int maxChar = 0;
 		int i = 0;
 		int max = arr[i];
-		for (; i < arr.length; i++){
-			if (max < arr[i]){
+		for (; i < arr.length; i++) {
+			if (max < arr[i]) {
 				max = arr[i];
-				count++;
-			}else continue;
+				maxChar = i;
+			} else continue;
 		}
-		return count;
+		return maxChar;
 	}
 
-	public static int countOfOdd(int[] arr){
-		int count = 0;
-		for (int i = 0; i < arr.length; i++){
-			if (arr[i]%2==0){
-				count += arr[i];
-			}else continue;
+	public int countOfOdd(int[] arr) {
+		int sum = 0;
+		for (int i = 1; i < arr.length; i += 2) {
+			sum += arr[i];
 		}
-		return count;
+		return sum;
 	}
 
-	public static String yarrA(int[] arr){
+	public String yarrA(int[] arr) {
 		int count = 1;
 		int xD = 0;
-		for (int i = 0; i < arr.length / 2; i++){
+		for (int i = 0; i < arr.length / 2; i++) {
 			xD = arr[i];
 			arr[i] = arr[arr.length - count];
 			arr[arr.length - count] = xD;
@@ -82,20 +74,20 @@ public class Arr {
 		return str;
 	}
 
-	public static int countOfNumOfOdd(int[] arr){
+	public int countOfNumOfOdd(int[] arr) {
 		int count = 0;
-		for (int i = 0; i < arr.length; i++){
-			if (arr[i]%2==0){
-				count ++;
-			}else continue;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 != 0) {
+				count++;
+			} else continue;
 		}
 		return count;
 	}
 
-	public static String ayrAr(int[] arr){
-		int count = (arr.length-1) / 2;
-		int xD = 0;
-		for (int i = 0; i < arr.length / 2; i++){
+	public String ayrAr(int[] arr) {
+		int count = arr.length / 2;
+		int xD ;
+		for (int i = 0; i < arr.length / 2; i++) {
 			xD = arr[i];
 			arr[i] = arr[(arr.length - 1) - count];
 			arr[(arr.length - 1) - Math.abs(count)] = xD;
@@ -105,13 +97,13 @@ public class Arr {
 		return str;
 	}
 
-	public static String arrBubbleSort(int[] arr){
-		for (int i = 0; i < arr.length; i++){
-			for( int j = 0; j < arr.length - 1; j++){
-				if(arr[j] > arr[j+1]){
-					int box  = arr[j];
-					arr[j] = arr[j+1];
-					arr[j+1] = box;
+	public String arrBubbleSort(int[] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr.length - 1; j++) {
+				if (arr[j] > arr[j + 1]) {
+					int box = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1] = box;
 				}
 			}
 		}
@@ -119,13 +111,13 @@ public class Arr {
 		return str;
 	}
 
-	public static String arrSelectionSort(int[] arr){
+	public String arrSelectionSort(int[] arr) {
 
-		for(int i = 0; i<arr.length; i++){
+		for (int i = 0; i < arr.length; i++) {
 			/////1st part
 			int min = (int) (Math.pow(2, 15) - 1);
-			for (int j = i; j < arr.length; j++){
-				if(min > arr[j]){
+			for (int j = i; j < arr.length; j++) {
+				if (min > arr[j]) {
 					min = arr[j];
 					arr[j] = arr[i];
 					arr[i] = min;
@@ -134,10 +126,5 @@ public class Arr {
 		}
 		String str = Arrays.toString(arr);
 		return str;
-	}
-
-	public static String arrInsertSort(int[] arr){
-
-		return null;
 	}
 }

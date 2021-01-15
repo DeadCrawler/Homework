@@ -1,10 +1,7 @@
 package cycles;
 
 public class Cykles {
-	public static void main(String[] args) {
-		System.out.println(Sort(12345));
-	}
-	
+
 	public int Countless() {
 		int sum = 0;
 		for (int nums = 1; nums < 100; nums++) {
@@ -40,7 +37,7 @@ public class Cykles {
 		return fact;
 	}
 	
-	public static int SumOfNums(int a) {
+	public int SumOfNums(int a) {
 		int arr[] = new int[20];
 		int sum = 0;
 		
@@ -54,7 +51,7 @@ public class Cykles {
 		return sum;	
 		}
 	
-	public static String Sort(int num) {
+	public String Sort(int num) {
 		String sort = "";
 		int chnum = num;
 		int count;

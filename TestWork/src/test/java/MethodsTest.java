@@ -109,4 +109,23 @@ class MethodsTest {
         String expected = "0000010";
         assertEquals(expected, methods.deselectAnyBitSelected(2, actual));
     }
+    @Test
+    void bitReversePositionsTest(){
+        byte[] actual = {0, 3, 6};
+        String expected = "1001011";
+        assertEquals(expected, methods.bitReversePositions(2, actual));
+    }
+    @Test
+    void bitReversePositionsTest_1(){
+        byte[] actual = {0, 0, 0};
+        String expected = "1000010";
+        assertEquals(expected, methods.bitReversePositions(2, actual));
+    }
+    @Test
+    void bitReversePositionsTest_2(){
+        byte[] actual = null;
+        Exception exception = new Exception(assertThrows(NullPointerException.class, ()-> methods.bitReversePositions(2, actual)));
+        assertEquals("java.lang.NullPointerException: Cannot read the array length because \"bitPositions\" is null", exception.getMessage());
+    }
+
 }
