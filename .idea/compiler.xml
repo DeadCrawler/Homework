@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="GameOfNumbers" />
+        <module name="HWwithOOP" />
+        <module name="CRUD" />
         <module name="HW2" />
         <module name="TestWork" />
         <module name="HW1" />
@@ -14,14 +16,18 @@
         <module name="HW3" />
         <module name="Swing Calc" />
         <module name="UralBeefshtakes" />
+        <module name="ProjectTest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="CRUD" target="15" />
       <module name="GameOfNumbers" target="15" />
       <module name="HW1" target="15" />
       <module name="HW2" target="15" />
       <module name="HW3" target="15" />
       <module name="HW4" target="15" />
+      <module name="HWwithOOP" target="15" />
+      <module name="ProjectTest" target="8" />
       <module name="Swing Calc" target="15" />
       <module name="TestWork" target="15" />
       <module name="UralBeefshtakes" target="15" />

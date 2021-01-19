@@ -1,11 +1,16 @@
 package person;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.opencsv.bean.CsvBindByPosition;
 
 import java.io.Serializable;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Objects;
 
 
 public class Person implements Serializable {
+    @JsonIgnoreProperties(ignoreUnknown = true)
     @CsvBindByPosition(position = 0)
     private int id;
     @CsvBindByPosition(position = 1)
@@ -79,5 +84,4 @@ public class Person implements Serializable {
 
     public Person() {
     }
-
 }

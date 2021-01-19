@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: com.fasterxml.jackson.dataformat.csv.*">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.11.1/jackson-annotations-2.11.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/Telegram Desktop/gson-2.8.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/jackson-dataformat-csv-2.1.2.jar/jackson-dataformat-csv-2.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.11.1/jackson-annotations-2.11.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.11.1/jackson-annotations-2.11.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

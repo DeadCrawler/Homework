@@ -10,7 +10,7 @@ class MethodsTest {
     Methods methods = new Methods();
 
     @Test
-    void bubbleSort_1(){
+    void bubbleSort_1() throws Exception {
         String expected = "[1, 2, 3, 4, 5, 6, 7, 8, 9]";
         int[] actual = {9,8,7,6,5,4,3,2,1};
         assertNotNull(actual);
@@ -18,7 +18,7 @@ class MethodsTest {
     }
 
     @Test
-    void bubbleSort_2(){
+    void bubbleSort_2() throws Exception {
         String expected = "[0, 0, 0, 0, 0, 0, 0, 0, 0]";
         int[] actual = {0,0,0,0,0,0,0,0,0};
         assertNotNull(actual);
