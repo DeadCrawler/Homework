@@ -1,39 +1,80 @@
 package object;
 
-import java.util.Arrays;
-
-public abstract class Memory {
+public class Memory {
     private String[] memoryCell;
+    private int initialCapacity;
+    private int count = 0;
+
+    public Memory(){
+//        memoryCell = null;
+        initialCapacity = 10;
+        memoryCell = new String[initialCapacity];
+    }
 
     public Memory(String[] memoryCell){
-        this.memoryCell = memoryCell;
-    }
+//        if(memoryCell == null){
+//            throw new NullPointerException("FUCK YOU");
+//        }
+        try {
+            initialCapacity = memoryCell.length + 10;
+            this.memoryCell = new String[initialCapacity];
+            for (int i = 0; i < memoryCell.length; i++) {
+                this.memoryCell[i] = memoryCell[i];
+            }
+            count = notNull(0) + 1;
 
-    public void setMemoryCell(String cell, int id) {
-        if(cell == null){
-            System.exit(0);
+        }catch (NullPointerException e){
+            e.getMessage();
         }
-        memoryCell[id] = cell;
-    }
 
-    public String getMemoryCell(int i) {
-        return memoryCell[i];
-    }
-
-    @Override
-    public String toString() {
-        return "Memory{" +
-                "memoryCell=" + Arrays.toString(memoryCell) +
-                '}';
     }
 
 
-    public abstract String readLast();
+    public String readLast (){
+//        try {
+            return memoryCell[notNull(0)];
+//        }catch (NullPointerException e){
+//            throw new NullPointerException("NullPoint");
+//        }
+    }
 
-    public abstract String removeLast();
+    public String removeLast(){
+        if(count >= 0) {
+            memoryCell[notNull(0)] = null;
+            count--;
+            return "Element #" + (count) + " is null";
+        }
+     return "There is nothing to remove";
+    }
 
-    public abstract boolean save();
+    public boolean save(String xD){
+        try{
+            if(notNull(0) == -1){
+                return false;
+            }
+            memoryCell[notNull(0)+1] = xD;
+            count++;
+            return true;
+        }catch (NullPointerException | StackOverflowError | ArrayIndexOutOfBoundsException e){
+            return false;
+        }
+    }
 
-    public abstract void getMemoryInfo();
+    public MemoryObject getMemoryInfo(){
+        if(notNull(0) == -1){
+            return new MemoryObject(initialCapacity);
+        }
+        return new MemoryObject(initialCapacity, notNull(0) + 1);
+    }
+
+
+    public int notNull(int count){
+        if(count == initialCapacity){
+            return -1;
+//            throw new ArrayIndexOutOfBoundsException("You are xD");
+        }
+        if(initialCapacity != 10){
+            return memoryCell[count] == null? count - 1: notNull(count+1) ;
+        } else return 0;
     }
 }
