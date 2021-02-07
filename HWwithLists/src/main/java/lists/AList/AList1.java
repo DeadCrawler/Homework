@@ -1,5 +1,7 @@
-package lists;
+package lists.AList;
 
+
+import lists.IList;
 
 import java.util.Arrays;
 
