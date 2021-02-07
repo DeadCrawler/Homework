@@ -22,9 +22,11 @@ public class AList1 implements IList {
 
     public AList1(int[] array){
         try {
-            capacity = array.length;
+            if(array.length > capacity) {
+                capacity = array.length;
+            }
             this.array = new int[capacity];
-            for (int i : array) {
+            for (int i = 0;i < array.length; i++) {
                 this.array[i] = array[i];
             }
             currID = capacity;
@@ -36,13 +38,14 @@ public class AList1 implements IList {
 
     @Override
     public void clear() {
+        notNull();
         currID = 0;
         array = null;
     }
 
     @Override
     public int size() {
-        return capacity;
+        return currID;
     }
 
     @Override
@@ -170,6 +173,5 @@ public class AList1 implements IList {
             return array1;
         }
         return array;
-
     }
 }
