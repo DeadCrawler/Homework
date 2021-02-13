@@ -39,6 +39,7 @@
       <module name="TestWork" target="15" />
       <module name="tree" target="15" />
       <module name="UralBeefshtakes" target="15" />
+      <module name="WebCalc" target="15" />
     </bytecodeTargetLevel>
   </component>
 </project>

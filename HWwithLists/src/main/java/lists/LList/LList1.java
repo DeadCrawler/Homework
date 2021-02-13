@@ -5,7 +5,7 @@ import lists.IList;
 import java.util.Arrays;
 
 public class LList1 implements IList {
-    private final Chain primeCell = new Chain();
+    private final Chain primeCell = new Chain(true);
     private Chain cell;
     private Chain saveCell;
 
@@ -33,22 +33,6 @@ public class LList1 implements IList {
 
         for(; counter < array.length; counter++){
             add(array[counter]);
-        }
-    }
-
-    public class Chain{
-        Chain leftSide;
-        Chain rightSide;
-        Integer value;
-
-        private Chain(){
-            rightSide = null;
-        }
-
-        private Chain(Integer value){
-            leftSide = null;
-            rightSide = null;
-            this.value = value;
         }
     }
 
@@ -157,6 +141,7 @@ public class LList1 implements IList {
 
         } else {                         //if it's 0 index
             cell = cell.rightSide;
+            cellDisconnector(cell);
             primeCell.rightSide = cell;
         }
 
@@ -217,11 +202,11 @@ public class LList1 implements IList {
 
     @Override
     public boolean removeAll(int[] ar) {
-        for (int i = 0; i < ar.length; i++) {
-            ar[i] = 0;
-            xD[i] = ar[i];
+        if(id == 0){
+            return false;
         }
-        return false;
+        xD = new int[id];
+        return true;
     }
     /////////////////////////////////////////PRIVATE METHODS|||||||||||||||||||||||||||||
 
