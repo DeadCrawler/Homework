@@ -12,10 +12,12 @@
         <module name="HW1" />
         <module name="HW4" />
         <module name="HW3" />
+        <module name="paint" />
         <module name="ProjectTest" />
         <module name="GameOfNumbers" />
         <module name="HWwithOOP" />
         <module name="HWwithTrees" />
+        <module name="MounthTwoTests" />
         <module name="Swing Calc" />
         <module name="UralBeefshtakes" />
         <module name="HWwithLists" />
@@ -33,6 +35,8 @@
       <module name="HWwithLists" target="15" />
       <module name="HWwithOOP" target="15" />
       <module name="HWwithTrees" target="15" />
+      <module name="MounthTwoTests" target="15" />
+      <module name="paint" target="15" />
       <module name="Paint" target="15" />
       <module name="ProjectTest" target="8" />
       <module name="Swing Calc" target="15" />
